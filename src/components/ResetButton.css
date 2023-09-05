@@ -1,0 +1,50 @@
+.reset-btn {
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #ff6b6b, #6b47ff); /* Gradient background */
+  background-size: 200% 200%;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  display: block;
+  transition: background-color 0.3s ease-in-out;
+  animation: gradientAnimation 10s ease infinite, scaleAnimation 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+  animation: hoverScaleAnimation 0.3s ease-in-out;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hoverScaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
